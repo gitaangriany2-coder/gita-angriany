@@ -1,0 +1,116 @@
+:root {
+    --sidebar-width: 260px;
+    --active-menu: linear-gradient(90deg, #1f6fd1, #4a2a9c);
+}
+
+Body {
+    font-family: "Soge UI", Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+#wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+#sidebar {
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
+    transition: margin-left var(--transition-speed) ease-in-out;
+    z-index: 1050;
+}
+
+.sidebar-nav .nav-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.375rem;
+    margin: 0.2rem 0.75rem;
+    font-weight: 400;
+}
+
+.sidebar-nav .nav-link.active {
+    background: var(--active-menu);
+    color: #ffff;
+}
+
+.sidebar-nav .nav-link:hover {
+    background: rgb(154, 153, 153);
+    color: #ffff;
+}
+
+.sidebar-nav .menu-text{
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-nav .nav-link:not(.active):hover .menu-text {
+    transform: translateX(5px);
+}
+
+.sidebar-nav .menu-icon {
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+.sidebar-nav .nav-link:not(.active):hover .menu-icon {
+    transform: rotateY(180deg);
+}
+
+/* topbar */
+#topbar {
+    height: var(--topbar-height);
+    padding: 0 1.Srem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+:root {
+    --topbar-heigth: 60px;
+}
+
+#wrapper {
+    display: flex;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+#content-wrapper {
+    flex: 1;
+    min-width: 0;
+}
+
+#topbar {
+  min-height: var(--topbar-height);
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#topbar > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+#topbar button {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+#topbar {
+    position: relative;
+    z-index: 1030;
+}
+
+#topbar .dropdown-menu {
+    z-index: 1050;
+
+}
